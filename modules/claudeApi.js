@@ -6,16 +6,16 @@ const API_KEY = process.env.CLAUDE_API_KEY;
 
 export async function getClaudeResponse(userMessage) {
     const websiteSummary = getWebsiteSummary();
-    // Baue den Prompt so, dass der Bot als professioneller Sekretär agiert
-    const prompt = `You are a professional secretary and knowledgeable consultant. Please answer the following question in the same language in which it was asked. Provide a clear, courteous, and detailed answer, and if any details are missing, ask follow-up questions iteratively until the customer's needs are fully clarified. If you are truly unable to provide a complete answer, politely advise the customer to contact support at mail@zrw-berlin.de.
+    // Baue den Prompt mit klaren Anweisungen, ohne den Ursprung des Contents preiszugeben
+    const prompt = `Du bist ein professioneller, höflicher und sachlicher Sekretär einer renommierten Möbelrestaurierungsfirma. Bitte beantworte die folgende Kundenanfrage präzise und zielgerichtet. Antworte in der gleichen Sprache, in der die Frage gestellt wurde, und gib eine fundierte, konkrete Antwort zu unseren Leistungen im Bereich Möbelrestaurierung. Falls noch wichtige Details fehlen, frage bitte gezielt nach, bis alle Informationen erfasst sind. Wenn du trotz Nachfragen nicht zu einer vollständigen Antwort kommst, weise den Kunden höflich darauf hin, sich an unseren Support unter mail@zrw-berlin.de zu wenden.
 
 Human: ${userMessage}
 
 Assistant:`;
 
     const body = {
-        model: "claude-2", // Passe den Modellnamen an, wenn nötig
-        max_tokens: 150,
+        model: "claude-2", // oder "claude-2.1", je nachdem, was freigeschaltet ist
+        max_tokens: 200,
         system: "You are a helpful assistant.",
         messages: [
             { role: "user", content: prompt }
