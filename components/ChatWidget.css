@@ -1,25 +1,26 @@
-/* Chat-Icon, das immer unten rechts sichtbar is */
+/* Chat-Icon – modern und ansprechend */
 .chat-icon {
     position: fixed;
     bottom: 20px;
     right: 20px;
     cursor: pointer;
     z-index: 1000;
-    transition: transform 0.2s ease;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .chat-icon:hover {
     transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
 }
 
 .chat-icon img {
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    border: 2px solid #0073e6;
 }
 
-/* Chat-Fenster im verbesserten Design */
+/* Chatfenster – stilvoll, modern und professionell */
 .chat-window {
     position: fixed;
     bottom: 20px;
@@ -36,7 +37,6 @@
     animation: fadeIn 0.3s ease-out;
 }
 
-/* Header mit Titel und Schließen-Button */
 .chat-header {
     background: #0073e6;
     color: #fff;
@@ -68,7 +68,6 @@
     opacity: 0.7;
 }
 
-/* IFrame: Füllt den Rest des Fensters */
 .chat-iframe {
     flex-grow: 1;
     border: none;
@@ -76,7 +75,7 @@
     border-bottom-right-radius: 10px;
 }
 
-/* Einfache Fade-In-Animation */
+/* Fade-In Animation für das Chatfenster */
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }

@@ -16,6 +16,7 @@ export async function POST(_request) {  // umbenannt zu _request
     }
 }
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 export async function GET(_request) {
     return NextResponse.json({ response: "GET method works" });
 }
