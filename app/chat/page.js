@@ -27,7 +27,7 @@ export default function ChatPage() {
     }
 
     return (
-        <div style={{ padding: "1rem" }}>
+        <div style={{ padding: "1rem", fontFamily: "Arial, sans-serif" }}>
             <h1>Chat Interface</h1>
             <div style={{
                 border: "1px solid #ccc",
@@ -37,7 +37,7 @@ export default function ChatPage() {
                 padding: "0.5rem"
             }}>
                 {messages.map((msg, idx) => (
-                    <div key={idx}>
+                    <div key={idx} style={{ marginBottom: "0.5rem" }}>
                         <strong>{msg.role}:</strong> {msg.content}
                     </div>
                 ))}
@@ -47,9 +47,9 @@ export default function ChatPage() {
                 value={userInput}
                 onChange={e => setUserInput(e.target.value)}
                 placeholder="Tippe deine Nachricht hier..."
-                style={{ width: "70%", marginRight: "0.5rem" }}
+                style={{ width: "70%", marginRight: "0.5rem", padding: "0.5rem", fontSize: "14px" }}
             />
-            <button onClick={handleSend}>Senden</button>
+            <button onClick={handleSend} style={{ padding: "0.5rem 1rem", fontSize: "14px", cursor: "pointer" }}>Senden</button>
         </div>
     );
 }
