@@ -15,7 +15,7 @@ export default function ChatPage() {
                 body: JSON.stringify({ message: userInput })
             });
             const data = await response.json();
-            setMessages((prev) => [
+            setMessages(prev => [
                 ...prev,
                 { role: "user", content: userInput },
                 { role: "assistant", content: data.response }
@@ -29,15 +29,13 @@ export default function ChatPage() {
     return (
         <div style={{ padding: "1rem" }}>
             <h1>Chat Interface</h1>
-            <div
-                style={{
-                    border: "1px solid #ccc",
-                    height: "200px",
-                    overflowY: "auto",
-                    marginBottom: "1rem",
-                    padding: "0.5rem"
-                }}
-            >
+            <div style={{
+                border: "1px solid #ccc",
+                height: "220px",
+                overflowY: "auto",
+                marginBottom: "1rem",
+                padding: "0.5rem"
+            }}>
                 {messages.map((msg, idx) => (
                     <div key={idx}>
                         <strong>{msg.role}:</strong> {msg.content}
@@ -47,7 +45,7 @@ export default function ChatPage() {
             <input
                 type="text"
                 value={userInput}
-                onChange={(e) => setUserInput(e.target.value)}
+                onChange={e => setUserInput(e.target.value)}
                 placeholder="Tippe deine Nachricht hier..."
                 style={{ width: "70%", marginRight: "0.5rem" }}
             />

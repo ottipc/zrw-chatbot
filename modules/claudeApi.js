@@ -15,7 +15,7 @@ Assistant:`;
 
     const body = {
         model: "claude-2", // oder "claude-2.1", je nachdem, was freigeschaltet ist
-        max_tokens: 200,
+        max_tokens: 600,
         system: "You are a helpful assistant.",
         messages: [
             { role: "user", content: prompt }
