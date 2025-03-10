@@ -1,6 +1,7 @@
 {
   "name": "zrw-chatbot",
   "version": "0.1.0",
+  "type": "module",
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
@@ -9,6 +10,11 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@shadcn/ui": "^0.0.4",
+    "dotenv": "^16.4.7",
+    "framer-motion": "^12.4.10",
+    "lucide-react": "^0.479.0",
+    "mongodb": "^6.14.2",
     "next": "15.2.0",
     "node-fetch": "^3.3.2",
     "react": "^19.0.0",
