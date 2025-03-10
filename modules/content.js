@@ -6,7 +6,7 @@ let cachedContent = "";
 let cachedSummary = "";
 
 try {
-    const filePath = path.join(process.cwd(), "content", "website.txt");
+    const filePath = path.join(process.cwd(), "content", "content.txt");
     cachedContent = fs.readFileSync(filePath, "utf8");
     console.log("Website content loaded:", cachedContent.substring(0, 100));
     cachedSummary = summarizeText(cachedContent);
