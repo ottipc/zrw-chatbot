@@ -28,7 +28,7 @@ export default function ChatPage() {
         }
     }
 
-    return (    
+    return (
         <div className="flex flex-col h-screen bg-gray-100">
             <div className="flex items-center justify-center bg-gradient-to-r from-blue-500 to-indigo-600 text-white p-4 shadow-lg">
                 <Bot className="h-8 w-8 mr-2" />
