@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { SendHorizontal, Bot, User } from "lucide-react"; // Icons
+import { SendHorizontal, Bot,} from "lucide-react"; // Icons
 
 export default function ChatPage() {
     const [userInput, setUserInput] = useState("");
