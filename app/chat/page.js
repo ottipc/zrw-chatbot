@@ -41,7 +41,7 @@ export default function ChatPage() {
                         {msg.role !== "user" && (
                             <img src={msg.avatar} alt="Bot" className="w-10 h-10 rounded-full mr-3 border shadow-md" />
                         )}
-                        <div className={`max-w-lg px-4 py-2 rounded-lg shadow-md ${msg.role === "user" ? "bg-blue-500 text-white" : "bg-white text-gray-800 border"}`}>
+                        <div className={`max-w-lg px-4s py-2 rounded-lg shadow-md ${msg.role === "user" ? "bg-blue-500 text-white" : "bg-white text-gray-800 border"}`}>
                             <p className="text-sm">{msg.content}</p>
                             {msg.source && <p className="text-xs text-gray-500 mt-1">Quelle: {msg.source}</p>}
                         </div>
